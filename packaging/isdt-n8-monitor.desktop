@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ISDT N8 Monitor
+Comment=Live monitor for the ISDT N8 battery charger
+Exec=isdt-n8-monitor
+Icon=isdt-n8-monitor
+Categories=Utility;System;
+Terminal=false
+StartupNotify=true

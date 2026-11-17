@@ -2,6 +2,8 @@
 
 A small cross-platform Rust desktop app for viewing live measurements from an ISDT N8 battery charger.
 
+Current release: **0.1**. Prebuilt downloads are attached to the [GitHub release](https://github.com/trashcoder/isdt-n8-monitor/releases/tag/v0.1).
+
 ![ISDT N8 Monitor showing the eight battery slots](assets/isdt-n8-monitor.png)
 
 ## Features

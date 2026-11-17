@@ -10,6 +10,7 @@ use hidapi::{HidApi, HidDevice};
 
 const VENDOR_ID: u16 = 0x28e9;
 const PRODUCT_ID: u16 = 0x028a;
+const APP_VERSION: &str = "0.1";
 const REPORT_LEN: usize = 64;
 const CHANNEL_COUNT: usize = 8;
 const POLL_INTERVAL: Duration = Duration::from_millis(900);
@@ -33,7 +34,7 @@ fn main() -> eframe::Result<()> {
     };
 
     eframe::run_native(
-        "ISDT N8 Monitor",
+        &format!("ISDT N8 Monitor v{APP_VERSION}"),
         options,
         Box::new(|cc| Ok(Box::new(ChargerApp::new(cc)))),
     )
@@ -548,9 +549,10 @@ fn header(
                             .color(Color32::WHITE),
                     );
                     ui.label(
-                        RichText::new(
-                            language.text("Ladegerät · Live-Monitor", "Charger · Live monitor"),
-                        )
+                        RichText::new(language.text(
+                            "Ladegerät · Live-Monitor · Version 0.1",
+                            "Charger · Live monitor · Version 0.1",
+                        ))
                         .size(13.0)
                         .color(muted()),
                     );
